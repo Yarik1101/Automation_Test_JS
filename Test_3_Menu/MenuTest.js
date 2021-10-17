@@ -2,6 +2,7 @@ const {Builder,By,Key} = require("selenium-webdriver");
 
 async function Menu_Test() {
     let driver = await new Builder().forBrowser('chrome').build();
+    
     await driver.get('http://automationpractice.com/index.php');
 
     let FirstItem = await driver.findElement(By.xpath('//li/a[@title="Women"]')).getText();
